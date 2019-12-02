@@ -52,7 +52,7 @@
 
         </div>
         <nav class="navbar navbar-expand-lg navbar-light">
-          <button id="burgerMenu" onclick="burgerMenu()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button id="burgerMenu" onclick="burgerMenu()" class="navbar-toggler" type="button" data-toggle="collapse"  aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -125,7 +125,7 @@
                             <div class="form-row">
                               <div class="input-form col-md-12 mb-3 area">
                                 <label for="validationTooltip01">اسم المنطقة</label>
-                                <input type="text" class="form-control" id="validationTooltip01" required>
+                                <input type="text" class="form-control" name="areaName" id="validationTooltip01" required>
                                 <div class="invalid-tooltip error-text">
                                     من فضلك ادخل اسم منطقة
                                   </div>
@@ -151,7 +151,7 @@
                         <div class="input-form col-md-12 area">
                             <div class="input-group">
     
-                                <input type="search" class="form-control" id="validationTooltipUsername" placeholder="اسم المنطقة" aria-describedby="validationTooltipUsernamePrepend" required>
+                                <input type="search" class="form-control" name="searchArea" id="validationTooltipUsername" placeholder="اسم المنطقة" aria-describedby="validationTooltipUsernamePrepend" required>
                               <div class="input-group-prepend mr-2">
                                   <span class="input-group-text p-0 " id="validationTooltipUsernamePrepend">                
                                     <button class="btn btn-dark-red" id="searchButton" type="submit"><i class="fas fa-search"></i></button>
@@ -175,14 +175,14 @@
                     <div class="form-row text-right">
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip02">اسم الشركة</label>
-                        <input type="text" class="form-control" id="validationTooltip02"  required>
+                        <input type="text" name="companyName" class="form-control" id="validationTooltip02"  required>
                         <div class="invalid-tooltip error-text">
                           من فضلك ادخل اسم الشركة
                         </div>
                       </div>
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip03">اسم المالك</label>
-                        <input type="text" class="form-control" id="validationTooltip03"  required>
+                        <input type="text" name="ownerName" class="form-control" id="validationTooltip03"  required>
                         <div class="invalid-tooltip error-text">
                           من فضلك ادخل اسم المالك
                         </div>
@@ -192,18 +192,18 @@
                     <div class="form-row text-right">
                       <div class="input-form col-md-4  ">
                         <label for="validationTooltip04">الجوال</label>
-                        <input type="number" min="0" class="form-control" id="validationTooltip04" required>
+                        <input type="number" min="0" name="mobile" class="form-control" id="validationTooltip04" required>
                         <div class="invalid-tooltip error-text">
                           من فضلك ادخل رقم الجوال
                         </div>
                       </div>
                       <div class="input-form col-md-4 ">
                         <label for="validationTooltip05">هاتف/جوال</label>
-                        <input type="number" min="0" class="form-control">
+                        <input type="number" min="0" name="tel1" class="form-control">
                       </div>
                       <div class="input-form col-md-4 ">
                         <label for="validationTooltip06">هاتف/جوال</label>
-                        <input type="number" min="0" class="form-control">
+                        <input type="number" min="0" name="tel2" class="form-control">
                       </div>
 
                     </div>
@@ -211,7 +211,7 @@
                     <div class="form-row text-right">
                       <div class="input-form col-md-6 ">
                           <label for="validationTooltip07">رقم العضوية</label>
-                          <input type="number" min="0" class="form-control" id="validationTooltip07" required>
+                          <input type="number" min="0" name="idNumber" class="form-control" id="validationTooltip07" required>
                           <div class="invalid-tooltip error-text">
                             من فضلك ادخل رقم العضوية
                           </div>
@@ -220,7 +220,7 @@
                             <label>تاريخ الطلب</label> 
                             <div class="row no-gutters">
                               <div class="date-input col-10 col-md-11">
-                                <input type="text" name="date" class="form-control" value="">
+                                <input type="text" name="date" name="reqDate" class="form-control" value="">
                               </div>
                               <div class="date-icon col-1 px-0">
                                   <i id="show-date" class="far fa-2x fa-calendar-alt"></i>
@@ -244,7 +244,7 @@
                       </div>
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip09">الحي</label>
-                        <select class="custom-select form-control" id="validationTooltip09" required>
+                        <select class="custom-select form-control" name="neigh" id="validationTooltip09" required>
                           <option selected disabled value="">اختر</option>
                           <option>...</option>
                         </select>
@@ -254,7 +254,7 @@
                       </div>
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip10">نوع العميل</label>
-                        <select class="custom-select form-control" id="validationTooltip10" required>
+                        <select class="custom-select form-control" name="clientType" id="validationTooltip10" required>
                           <option selected disabled value="">اختر</option>
                           <option>...</option>
                         </select>
@@ -264,7 +264,7 @@
                       </div>
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip11">القطاع</label>
-                        <select class="custom-select form-control" id="validationTooltip11" required>
+                        <select class="custom-select form-control" name="branch" id="validationTooltip11" required>
                           <option selected disabled value="">اختر</option>
                           <option>...</option>
                         </select>
@@ -277,7 +277,7 @@
                     <div class="form-row text-right">
                       <div class="input-form col-md-6 ">
                           <label for="validationTooltip12">رقم السجل</label>
-                          <input type="number" min="0" class="form-control" id="validationTooltip12" required>
+                          <input type="number" min="0" class="form-control" name="formNumber" id="validationTooltip12" required>
                           <div class="invalid-tooltip error-text">
                             من فضلك ادخل رقم السجل
                           </div>
@@ -287,25 +287,25 @@
                     <div class="form-row text-right">
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip13">البريد الإكتروني</label>
-                        <input type="email" class="form-control" id="validationTooltip13"  required>
+                        <input type="email" class="form-control" name="email" id="validationTooltip13"  required>
                         <div class="invalid-tooltip error-text">
                           من فضلك ادخل البريد الاكتروني 
                         </div>
                       </div>
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip01">الموقع الإكتروني</label>
-                        <input type="text" class="form-control">
+                        <input type="text" name="website" class="form-control">
                       </div>
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip14">صندوق البريد</label>
-                        <input type="text" class="form-control" id="validationTooltip14"  required>
+                        <input type="text" class="form-control" name="box" id="validationTooltip14"  required>
                         <div class="invalid-tooltip error-text">
                           من فضلك ادخل صندوق البريد 
                         </div>
                       </div>
                       <div class="input-form col-md-6 ">
                           <label for="validationTooltip15">الرمز البريدي</label>
-                          <input type="number" min="0" class="form-control" id="validationTooltip15" required>
+                          <input type="number" min="0" name="zipNumber" class="form-control" id="validationTooltip15" required>
                           <div class="invalid-tooltip error-text">
                             من فضلك ادخل الرمز البريدي
                           </div>
@@ -327,7 +327,7 @@
                     <div class="form-row text-right">
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip16">موقع العميل</label>
-                        <input type="text" class="form-control" id="validationTooltip16"  required>
+                        <input type="text" class="form-control" name="clientLocation" id="validationTooltip16"  required>
                         <div class="invalid-tooltip error-text">
                           من فضلك ادخل موقع العميل 
                         </div>
@@ -364,10 +364,20 @@
         toggle=!toggle;
         if(toggle){
           $('body').addClass('no-scroll')
+          $('.navbar-collapse').addClass('show')
+          $('.navbar-toggler-icon').addClass('icon-x')
+
         }else{
           $('body').removeClass('no-scroll')
+          $('.navbar-collapse').removeClass('show')
+          $('.navbar-toggler-icon').removeClass('icon-x')
+
+
         }
 
+      }
+      if($('#burgerMenu').hasClass('collapsed')){
+        $('body').removeClass('no-scroll')
       }
       // });
     </script>
