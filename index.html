@@ -52,7 +52,7 @@
 
         </div>
         <nav class="navbar navbar-expand-lg navbar-light">
-          <button id="burgerMenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button id="burgerMenu" onclick="burgerMenu()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -353,6 +353,24 @@
 
     <!-- js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+
+    <!-- script for burger Menu -->
+    <script>
+      // $( document ).ready(function() {
+      var toggle=false;
+      
+      function burgerMenu(){
+
+        toggle=!toggle;
+        if(toggle){
+          $('body').addClass('no-scroll')
+        }else{
+          $('body').removeClass('no-scroll')
+        }
+
+      }
+      // });
+    </script>
 
     <!-- form validation -->
     <script>
