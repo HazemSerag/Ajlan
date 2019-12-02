@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>المناطق</title>
-    
+    <link rel="shortcut icon" type="image/png" href="./assets/img/logo-nav.png"/>
     <!-- BEGIN THEME PLUGINS STYLE -->
     <link href="assets/plugins/date-range-picker/daterangepicker.css" rel="stylesheet" type="text/css"/>   
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/all.css">
@@ -23,6 +23,9 @@
     <!-- Header -->
     <header>
       <div id="myNav">
+        <div class="logo-mobile" >
+          <a href="#"><img src="assets/img/logo-nav.png"  alt="Logo"></a>
+        </div>
         <div class="navbar-brand" href="#">
           <div class="row no-gutters border-nav-bottom">
               <div class="logo col-md-6 px-0">
@@ -30,10 +33,18 @@
               </div>
               <div class="user col-lg-6 px-0">
                 <div class="row no-gutters">
-                    <div id="logout" class="logout col-12 dark-red bold"><div class="log">خروج <i class="fas fa-sign-out-alt mx-2"></i></div></div>
+                  
                     <div class="details col-12">
-                        <span>مرحبا:</span>
-                        <span class="username"><span id="username">اسم المستخدم</span><i class="fas fa-user-tie mx-2"></i></span>
+                        <div class="dropdown">
+                            <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="username">اسم المستخدم</span><i class="fas fa-user-tie mx-2"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div id="logout" class="logout col-12 dark-red bold"><div class="log">خروج <i class="fas fa-sign-out-alt mx-2"></i></div></div>
+                            </div>
+                          </div>
+                        <!-- <span>مرحبا:</span>
+                        <span class="username"><span id="username">اسم المستخدم</span><i class="fas fa-user-tie mx-2"></i></span> -->
                     </div>
                 </div>
               </div>
@@ -41,7 +52,7 @@
 
         </div>
         <nav class="navbar navbar-expand-lg navbar-light">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button id="burgerMenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -91,7 +102,7 @@
         <div class="row">
           <div class="col-12 content">
             <div class="row">
-              <h3 class="text-dark-red title bold my-5 text-center col-12">المناطق</h3>
+              <h3 class="text-dark-red title bold my-4 text-center col-12">المناطق</h3>
             
               <!-- Modal -->
               <div class="add-area my-2 col-12">
@@ -115,7 +126,7 @@
                               <div class="input-form col-md-12 mb-3 area">
                                 <label for="validationTooltip01">اسم المنطقة</label>
                                 <input type="text" class="form-control" id="validationTooltip01" required>
-                                <div class="invalid-tooltip">
+                                <div class="invalid-tooltip error-text">
                                     من فضلك ادخل اسم منطقة
                                   </div>
                               </div>
@@ -141,12 +152,12 @@
                             <div class="input-group">
     
                                 <input type="search" class="form-control" id="validationTooltipUsername" placeholder="اسم المنطقة" aria-describedby="validationTooltipUsernamePrepend" required>
-                              <div class="input-group-prepend">
+                              <div class="input-group-prepend mr-2">
                                   <span class="input-group-text p-0 " id="validationTooltipUsernamePrepend">                
                                     <button class="btn btn-dark-red" id="searchButton" type="submit"><i class="fas fa-search"></i></button>
                                   </span>
                                 </div>
-                              <div class="invalid-tooltip">
+                              <div class="invalid-tooltip error-text">
                                 من فضلك ادخل اسم منطقة
                               </div>
                             </div>
@@ -165,14 +176,14 @@
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip02">اسم الشركة</label>
                         <input type="text" class="form-control" id="validationTooltip02"  required>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                           من فضلك ادخل اسم الشركة
                         </div>
                       </div>
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip03">اسم المالك</label>
                         <input type="text" class="form-control" id="validationTooltip03"  required>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                           من فضلك ادخل اسم المالك
                         </div>
                       </div>
@@ -182,7 +193,7 @@
                       <div class="input-form col-md-4  ">
                         <label for="validationTooltip04">الجوال</label>
                         <input type="number" min="0" class="form-control" id="validationTooltip04" required>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                           من فضلك ادخل رقم الجوال
                         </div>
                       </div>
@@ -201,7 +212,7 @@
                       <div class="input-form col-md-6 ">
                           <label for="validationTooltip07">رقم العضوية</label>
                           <input type="number" min="0" class="form-control" id="validationTooltip07" required>
-                          <div class="invalid-tooltip">
+                          <div class="invalid-tooltip error-text">
                             من فضلك ادخل رقم العضوية
                           </div>
                         </div>
@@ -227,7 +238,7 @@
                           <option selected disabled value="">اختر</option>
                           <option>...</option>
                         </select>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                           من فضلك اختر منطقة
                         </div>
                       </div>
@@ -237,7 +248,7 @@
                           <option selected disabled value="">اختر</option>
                           <option>...</option>
                         </select>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                             من فضلك اختر حي
                         </div>
                       </div>
@@ -247,7 +258,7 @@
                           <option selected disabled value="">اختر</option>
                           <option>...</option>
                         </select>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                             من فضلك اختر نوع العميل
                         </div>
                       </div>
@@ -257,7 +268,7 @@
                           <option selected disabled value="">اختر</option>
                           <option>...</option>
                         </select>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                             من فضلك اختر القطاع      
                         </div>
                         </div>
@@ -267,7 +278,7 @@
                       <div class="input-form col-md-6 ">
                           <label for="validationTooltip12">رقم السجل</label>
                           <input type="number" min="0" class="form-control" id="validationTooltip12" required>
-                          <div class="invalid-tooltip">
+                          <div class="invalid-tooltip error-text">
                             من فضلك ادخل رقم السجل
                           </div>
                       </div>
@@ -277,7 +288,7 @@
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip13">البريد الإكتروني</label>
                         <input type="email" class="form-control" id="validationTooltip13"  required>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                           من فضلك ادخل البريد الاكتروني 
                         </div>
                       </div>
@@ -288,14 +299,14 @@
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip14">صندوق البريد</label>
                         <input type="text" class="form-control" id="validationTooltip14"  required>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                           من فضلك ادخل صندوق البريد 
                         </div>
                       </div>
                       <div class="input-form col-md-6 ">
                           <label for="validationTooltip15">الرمز البريدي</label>
                           <input type="number" min="0" class="form-control" id="validationTooltip15" required>
-                          <div class="invalid-tooltip">
+                          <div class="invalid-tooltip error-text">
                             من فضلك ادخل الرمز البريدي
                           </div>
                       </div>
@@ -317,7 +328,7 @@
                       <div class="input-form col-md-6 ">
                         <label for="validationTooltip16">موقع العميل</label>
                         <input type="text" class="form-control" id="validationTooltip16"  required>
-                        <div class="invalid-tooltip">
+                        <div class="invalid-tooltip error-text">
                           من فضلك ادخل موقع العميل 
                         </div>
                       </div>
