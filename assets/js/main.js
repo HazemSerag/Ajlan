@@ -1,41 +1,22 @@
-// A $( document ).ready() block.
-$( document ).ready(function() {
+// <!-- script for burger Menu -->
+  var toggle=false;
+  
+  function burgerMenu(){
 
-    // SLIDER
-    $('.carousel').carousel({
-        interval: 3000
-    });
-    // END SLIDER
+    toggle=!toggle;
+    if(toggle){
+      $('.navbar-collapse').addClass('show')
+      $('.navbar-toggler-icon').addClass('icon-x')
 
-    // MENU SCROLL
-    if ($(window).width() >= 992) {  
-        var lastScrollTop = 0;
-        $(window).scroll(function(event){
-            var st = $(this).scrollTop();
-            if (st > lastScrollTop){
-                $(".main-menu").slideUp("fast");
-            } else {
-                $(".main-menu").slideDown("fast");
-            }
-            lastScrollTop = st;
-        });
-    } 
-    else {
-        $(".main-menu").addClass("fixed-menu");
+    }else{
+      $('.navbar-collapse').removeClass('show')
+      $('.navbar-toggler-icon').removeClass('icon-x')
+
+
     }
-    // END MENU SCROLL
 
-    // collapse
-    $(".abn-btn").click(function( event ) {
-        event.preventDefault();
-        $(".abn-btn").show();
-        $( this ).hide();
-    });
-    // end collapse
-    
+  }
 
-
-});
 
 
 
